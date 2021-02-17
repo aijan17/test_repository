@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculate</title>
+</head>
+<style>
+    body{
+        background-image: url("https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg");
+    }
+    .form{
+        margin-top: 80px;
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .first{
+        margin-left: 35px;
+    }
+
+    .sec{
+        margin-top: 27px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    .actions{
+        margin-top: 20px;
+        text-align: left;
+        border: 1px solid black;
+        border-radius: 15px;
+        width: 30%;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlEuT_9bEFmMXLejKAgxIXxiJXWL_x1_v9_g&usqp=CAU");
+    }
+
+    .button{
+        margin-left: 85px;
+        margin-top: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #f1f1f1;
+        color: black;
+        font-size: 16px;
+        padding: 16px 30px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button:hover {
+
+        background-color: mediumpurple;
+        color: white;
+    }
+</style>
+<body>
+<div>
+    <form class="form" action="/" method="post">
+        {% csrf_token %}
+        <label >
+        First number: <input class="first" type="number" name="first"/>
+        </label>
+        </br>
+        <label>
+        Second number: <input class="sec" type="number" name="second"/>
+        </label>
+        <br/>
+        <div class="actions">
+        <input style="margin-top: 20px" type="radio" name="num" value="add">
+        <label for="add">Add</label><br>
+        <input type="radio" name="num" value="subtract">
+        <label for="subtract">Subtract</label><br>
+        <input type="radio" name="num" value="multiply">
+        <label for="multiply">Multiply</label><br>
+        <input type="radio" name="num" value="divide">
+        <label for="divide">Divide</label><br><br>
+        <input class="button" type="submit" value="calculate">
+        </div>
+    </form>
+
+</div>
+</body>
+</html>
